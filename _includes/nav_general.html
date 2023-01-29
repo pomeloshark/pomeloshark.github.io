@@ -1,0 +1,8 @@
+<nav class="nav_general">
+   <a href="/" class="global-nav-link">Home</a>
+   {% for item in site.data.projects %}
+      <a href="{{ item.link }}" class="global-nav-link">
+         {{ item.name }}
+      </a>
+   {% endfor %}
+</nav>

@@ -1,0 +1,429 @@
+@charset "UTF-8";
+/* The variables directory contains any SCSS that doesn't create any actual CSS output. */ /*------------------------------------*\
+  # COLOUR SCHEME
+\*------------------------------------*/
+/*------------------------------------*\
+  # COLOUR SCHEME values
+\*------------------------------------*/
+/*------------------------------------*\
+// General searchbar colours.
+$color-searchbar_background: $color-paper_light;
+$color-searchbar_border: $color-shortbread_dark;
+$color-searchbar_border_hover: $color-linen;
+$color-searchbar_border_focus: $color-melon;
+$color-searchbar_shadow_hover: $color-peach;
+$color-searchbar_shadow_focus: $color-melon;
+
+// General button colours.
+$color-button_background: $color-peach;
+$color-button_shadow_hover: $color-melon;
+$color-button_shadow_focus: $color-melon;
+$color-button_outline-focus: $color-melon;
+\*------------------------------------*/
+/*------------------------------------*\
+  # COLOUR SCHEME values
+  # page- or section-specific
+\*------------------------------------*/
+/*------------------------------------*\
+  # FONT IMPORTS
+\*------------------------------------*/
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("/assets/fonts/LibertinusSerif/LibertinusSerif-Regular.woff2") format("woff2"), url("/assets/fonts/LibertinusSerif/LibertinusSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("/assets/fonts/LibertinusSerif/LibertinusSerif-Italic.woff2") format("woff2"), url("/assets/fonts/LibertinusSerif/LibertinusSerif-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("/assets/fonts/LibertinusSerif/LibertinusSerif-Bold.woff2") format("woff2"), url("/assets/fonts/LibertinusSerif/LibertinusSerif-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter/Inter-Regular.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-Regular.woff") format("woff"), url("/assets/fonts/Inter/Inter-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter/Inter-Italic.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-Italic.woff") format("woff"), url("/assets/fonts/Inter/Inter-Italic.otf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter/Inter-Bold.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-Bold.woff") format("woff"), url("/assets/fonts/Inter/Inter-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Liberation Mono";
+  src: url("/assets/fonts/LiberationMono/LiberationMono-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Liberation Mono";
+  src: url("/assets/fonts/LiberationMono/LiberationMono-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Liberation Mono";
+  src: url("/assets/fonts/LiberationMono/LiberationMono-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+/*------------------------------------*\
+  # FONT FAMILIES
+\*------------------------------------*/
+/*------------------------------------*\
+  # FONT-FAMILY values
+\*------------------------------------*/
+/*------------------------------------*\
+  # FONT SIZES
+\*------------------------------------*/
+/* Aligned to a major third (1.250) scale. */
+/*------------------------------------*\
+  # FONT-SIZE values
+\*------------------------------------*/
+/* Partials are all the components of a webpage broken down into manageable chunks. Organized by page type (i.e. templates for wiki pages, grammars, etc). */
+/*------------------------------------*\
+  # BASE STYLING
+  # styling universal to all pages
+\*------------------------------------*/
+html {
+  /* Correct box-sizing in IE. */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  /* Hard reset on spacing, for the insane. */
+  margin: 0;
+  padding: 0;
+  color: #33272a;
+  line-height: 1.75;
+}
+
+body {
+  width: 65%;
+  margin: 4% auto;
+  background-color: #fdf8f5;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", DejaVu-Sans, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+@media (max-width: 599px) {
+  body {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  body {
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    width: 65%;
+    font-size: 100%;
+  }
+}
+
+main {
+  padding: 3rem;
+  background-color: #fefbf9;
+  border: 1px solid #f8eee8;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 0 20px #f8eee8;
+}
+
+footer {
+  padding: 3rem;
+  background: #f8eee8;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 0 20px #f8eee8;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.nav_general {
+  padding-bottom: 3rem;
+  display: flex;
+}
+
+.global-nav-link {
+  position: relative;
+  display: inline-block;
+  margin-right: 1.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.global-nav-link:link, .global-nav-link:hover, .global-nav-link:visited {
+  color: #33272a;
+}
+.global-nav-link::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+  border-bottom: 2px solid #edab9f;
+  transition: 0.4s;
+}
+.global-nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/*------------------------------------*\
+  # BASE STYLING
+  # styling universal to all pages
+\*------------------------------------*/
+h1,
+h2,
+h3 {
+  font-family: "Libertinus Serif", "Times New Roman", Georgia, serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.052em;
+  padding: 0 0 0.19em;
+}
+h1:before {
+  content: "§ ";
+  color: #f4cbac;
+}
+
+h2 {
+  font-size: 1.953em;
+  padding: 0.32em 0 0.61em;
+}
+
+h3 {
+  font-size: 1.563em;
+  font-variant: small-caps;
+  padding: 0.71em 0 0.9em 0;
+}
+
+a,
+a:link,
+a:active {
+  color: #db7886;
+  transition: 0.25s;
+}
+
+a:hover {
+  color: #e18692;
+  transition: 0.25s;
+}
+
+a.active,
+a:focus {
+  border: 0;
+  border-radius: 0.05em;
+  outline: 3px solid #edab9f;
+  outline-offset: 0.2em;
+  transition: 0.25s;
+}
+
+p {
+  margin-bottom: 1.75em;
+}
+
+sup,
+sub {
+  font-size: 0.8em;
+  line-height: 0;
+}
+
+abbr {
+  cursor: help;
+}
+
+dl,
+ol,
+ul {
+  margin-bottom: 1.75em;
+}
+
+ul ul,
+ol ol {
+  margin-left: 2em;
+  margin-bottom: 0;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ol,
+ul {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+dl {
+  margin-left: 2em;
+  margin-right: 3em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1em;
+}
+
+img {
+  border: 0;
+}
+
+figcaption {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+blockquote {
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 1.75em;
+  padding: 1.75em;
+  background-color: #fdf8f5;
+  border-left: 0.5em solid #f8eee8;
+}
+blockquote figcaption {
+  text-align: right;
+}
+blockquote figcaption cite {
+  display: inline;
+}
+
+hr {
+  margin: 3.5em 6em 3.36em;
+  border-style: solid;
+  border-color: #f3ebe7;
+}
+
+table {
+  margin: auto;
+  margin-bottom: 1.75em;
+  border-collapse: collapse;
+  border-bottom: 0;
+}
+
+tr:nth-child(even) {
+  background-color: #fdf8f5;
+}
+
+th:first-child,
+td:first-child {
+  border-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+th,
+td {
+  border: 1px solid #f8eee8;
+  padding: 0.5em;
+}
+
+th {
+  border-top: 0;
+  background-color: #f8eee8;
+  text-align: center;
+}
+
+td {
+  border-bottom: 0;
+}
+
+caption {
+  caption-side: bottom;
+  font-size: 0.8em;
+  padding-top: 1em;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "Liberation Mono", monospace;
+}
+
+code {
+  padding: 0.4em 0.5em 0.2em;
+  background-color: #f8eee8;
+  color: #33272a;
+  border-radius: 0.3em;
+}
+
+kbd {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  min-width: 0.75em;
+  padding: 0.2em 0.5em;
+  line-height: 1;
+  background-color: #fefbf9;
+  border: 1px solid #f8eee8;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 0 1px #f8eee8;
+  cursor: default;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", DejaVu-Sans, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  text-align: center;
+  color: #33272a;
+  transition: 0.25s;
+}
+kbd:hover {
+  box-shadow: 0 1px 0 0.5px #f8eee8;
+  top: 1px;
+}
+
+pre {
+  padding: 1em;
+  margin-bottom: 1.75em;
+  white-space: pre-wrap;
+  background-color: #f8eee8;
+  color: #33272a;
+  border-radius: 6px;
+}
+pre code {
+  padding: 0;
+}
+
+.index-dl {
+  padding: 0 6em;
+}
+.index-dl dt {
+  font-weight: normal;
+}
+.index-dl dd {
+  margin-left: 0;
+  margin-bottom: 1.75em;
+}
+
+/*# sourceMappingURL=css.css.map */

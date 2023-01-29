@@ -1,0 +1,89 @@
+/*------------------------------------*\
+  # COLOUR SCHEME
+\*------------------------------------*/
+
+// neutrals
+$color-linen: #f3ebe7;
+$color-chiffon: #fbf5f3;
+$color-lace: #fbf9f8;
+
+$color-biscuit: #f8eee8;
+$color-shortbread: #fdf8f5;//#fbf4f1;
+$color-cream: #fffefd;
+$color-buttermilk: #fefbf9;
+
+$color-espresso: #33272a;
+
+// brights
+$color-mulberry: #a35b8b;
+$color-raspberry: #c66b96;
+$color-leaf: #e1ebb4;
+$color-mint: #f1f5e1;
+
+$color-pink: #eebbc3;
+$color-rose: #debdc4;
+
+
+// links
+$color-blue_light: #4083ae; // #3B79A0 wcag a pass
+$color-blue_dark: #356d90;
+$color-purple: #61609d;
+$color-blue_pale: #c6dffc;
+
+/*------------------------------------*\
+  # COLOUR SCHEME values
+\*------------------------------------*/
+
+// Colours that apply to the body of all pages.
+$color-body_background: $color-shortbread;
+$color-content_background: $color-buttermilk;
+$color-content_border: $color-biscuit;
+$color-footer_background: $color-biscuit;
+
+// Global text and link colours.
+$color-body_text: $color-espresso;
+
+$color-link: #db7886;
+$color-link_hover: #e18692;
+$color-link_active: #e18692;
+$color-link_visited: #e18692;
+$color-link_focus: $color-blue_pale;
+
+// General table colours.
+$color-table_row_alt: $color-shortbread;
+$color-table_cell_border: $color-biscuit;
+$color-table_header_background: $color-biscuit;
+
+/*------------------------------------*\
+// General searchbar colours.
+$color-searchbar_background: $color-paper_light;
+$color-searchbar_border: $color-shortbread_dark;
+$color-searchbar_border_hover: $color-linen;
+$color-searchbar_border_focus: $color-melon;
+$color-searchbar_shadow_hover: $color-peach;
+$color-searchbar_shadow_focus: $color-melon;
+
+// General button colours.
+$color-button_background: $color-peach;
+$color-button_shadow_hover: $color-melon;
+$color-button_shadow_focus: $color-melon;
+$color-button_outline-focus: $color-melon;
+\*------------------------------------*/
+
+// Miscellaneous
+$color-code_background: $color-biscuit;
+$color-code_text: $color-espresso;
+$color-hr: $color-linen;
+
+$color-kbd_background: $color-content_background;
+$color-kbd_border: $color-biscuit;
+$color-kbd_box_shadow: $color-biscuit;
+$color-kbd_hover: $color-biscuit;
+
+$color-blockquote_background: $color-shortbread;
+$color-blockquote_border: $color-biscuit;
+
+/*------------------------------------*\
+  # COLOUR SCHEME values
+  # page- or section-specific
+\*------------------------------------*/

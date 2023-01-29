@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+   <head>
+
+   <meta charset="utf-8">
+
+   <title>
+      
+         a personal wiki with jekyll | the mermaid's purse
+      
+   </title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="/assets/css/css.css">
+   <link rel="stylesheet" href="/assets/fonts/RemixIcon/remixicon.css">
+
+   <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
+
+</head>
+
+
+   <body>
+
+         <main>
+
+            <nav class="nav_general">
+   <a href="/" class="global-nav-link">Home</a>
+   
+      <a href="/worldbuilding" class="global-nav-link">
+         Worldbuilding
+      </a>
+   
+      <a href="/language" class="global-nav-link">
+         Language
+      </a>
+   
+      <a href="/dotfiles" class="global-nav-link">
+         Dotfiles
+      </a>
+   
+      <a href="/coding" class="global-nav-link">
+         Coding
+      </a>
+   
+</nav>
+
+
+<h1>a personal wiki with jekyll</h1>
+
+<p>This is the method I use to store and organize my worldbuilding, and how to implement it if you’d like to do the same.</p>
+
+<p><a href="https://jekyllrb.com/">Jekyll</a> is a <a href="https://www.cloudflare.com/learning/performance/static-site-generator/">static-site generator</a>: it generates your website once, making all the files ready for retrieval ahead of time. This website was built with it, because it’s what Github Pages uses, but it’s also a really good tool if you just want to browse your files like a website without actually publishing them on one.</p>
+
+<p>The way I structure my Jekyll projects allows me to get all the HTML and CSS out of the way in a handful of files, and then all the actual content is written in Markdown.</p>
+
+<h2 id="getting-started-with-jekyll">getting started with jekyll</h2>
+
+<p>Follow the instructions for your operating system <a href="https://jekyllrb.com/docs/installation/">here</a> to install Jekyll.</p>
+
+<p>Once you’ve got it installed you can create a new site by running</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new SITE_NAME_HERE
+</code></pre></div></div>
+
+<p>If you want to use the setup I use, you can download the template at its github repository. This way it’s already configured to work well with the theme.</p>
+
+<ol>
+  <li>go to the wiki repo and download it. unzip it into your preferred location</li>
+  <li>download the rubygem</li>
+  <li>edit your gemfile and config</li>
+  <li>serve the site and navigate to the localhost</li>
+</ol>
+
+<h2 id="site-structure">site structure</h2>
+
+<p>A basic Jekyll site includes the following:</p>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">_includes</code> folder contains snippets of HTML that are frequently reused on pages throughout the website. This saves us from having to copy and paste the HTML on multiple pages, and we only have to edit it in one file in order to change every instance of it.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">_layouts</code> folder contains the formatting for different types of pages, meaning that instead of formatting each page individually we can just specify which layout template to use.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">_sass</code> folder contains all the styling for the site, written in SCSS.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">_site</code> folder contains everything that Jekyll outputs when it builds the site. Don’t edit anything in this folder, as it will be rewritten the next time you serve the site.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">assets</code> folder contains things like fonts, images, and Javascript files. It also contains a <code class="language-plaintext highlighter-rouge">.css</code> file importing all of your SCSS so that Jekyll can convert it to regular CSS; don’t edit this file.</li>
+</ul>
+
+
+
+         </main>
+
+      <footer>
+   <p>The <a href="https://github.com/pomeloshark/pomeloshark.github.io">code</a> for this website is released under the MIT license.</p>
+   <p>Except where specified otherwise, the information provided here is in the public domain. Do whatever you like with it.</p>
+</footer>
+
+
+   </body>
+
+</html>

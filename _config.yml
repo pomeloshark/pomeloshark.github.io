@@ -1,0 +1,16 @@
+# site setting variables
+# all of these can be accessed by {{ site.variable }}
+title: the mermaid's purse
+email:
+description: >
+  mermaid purses
+baseurl: "" # defines subpath ie /path/; does not include hostname
+url: "https://pomeloshark.github.io"
+github_username: pomeloshark
+
+# build settings. i borrowed these from https://www.taniarascia.com/make-a-static-website-with-jekyll/
+sass:
+  sass_dir: _sass # declares _sass as the sass directory
+include: ['_pages'] # forces custom pages to be organized into their own directory
+kramdown:
+  input: GFM

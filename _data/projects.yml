@@ -1,0 +1,16 @@
+- name: Worldbuilding
+  link: /worldbuilding
+#  icon: ri-global-line
+  description: Resources for worldbuilders who want to make their world as realistic as possible, or who want to know what the rules are in order to break them. Astronomy, earth sciences, biology.
+
+- name: Language
+  link: /language
+#  icon: ri-translate-2
+  description: Subsection of worldbuilding large enough to merit being mentioned separately. Covers as many fields of linguistics as I can fit in my library.
+
+- name: Dotfiles
+  link: /dotfiles
+  description: Ricing it up
+
+- name: Coding
+  link: /coding
