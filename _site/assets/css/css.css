@@ -158,6 +158,7 @@ main {
 }
 @media (max-width: 599px) {
   main {
+    padding: 2rem;
     border: 0;
     border-radius: 0;
     box-shadow: 0;
@@ -174,6 +175,7 @@ footer {
 }
 @media (max-width: 599px) {
   footer {
+    padding: 2rem;
     border: 0;
     border-radius: 0;
     box-shadow: 0;
@@ -183,6 +185,11 @@ footer {
 .nav_general {
   padding-bottom: 3rem;
   display: flex;
+}
+@media (max-width: 599px) {
+  .nav_general {
+    flex-wrap: wrap;
+  }
 }
 
 .global-nav-link {

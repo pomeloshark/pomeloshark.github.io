@@ -55,6 +55,7 @@ main {
    border-radius: 1rem 1rem 0 0;
    box-shadow: 0 0 10px $color-content_border;
    @include for-phone-only {
+      padding: 2rem;
       border: 0;
       border-radius: 0;
       box-shadow: 0;
@@ -69,6 +70,7 @@ footer {
    font-size: $fontsize-small;
    text-align: center;
    @include for-phone-only {
+      padding: 2rem;
       border: 0;
       border-radius: 0;
       box-shadow: 0;
@@ -78,6 +80,9 @@ footer {
 .nav_general {
    padding-bottom: 3rem;
    display: flex;
+   @include for-phone-only {
+      flex-wrap: wrap;
+   }
 }
 
 .global-nav-link {
