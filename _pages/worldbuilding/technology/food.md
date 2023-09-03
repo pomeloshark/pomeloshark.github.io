@@ -1,7 +1,7 @@
 ---
-layout: default
-title: technology
-permalink: /worldbuilding/technology/food.html
+   layout: default
+   title: technology
+   permalink: /worldbuilding/technology/food.html
 ---
 
 cooking: ovens

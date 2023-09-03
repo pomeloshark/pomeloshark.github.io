@@ -1,7 +1,9 @@
 ---
-layout: page
-title: phonology
-permalink: /language/phonology.html
+   layout: page
+   title: phonology
+   permalink: /language/phonology.html
+---
+
 ---
 
 the syllable

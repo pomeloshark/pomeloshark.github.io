@@ -1,7 +1,9 @@
 ---
-layout: page
-title: anthropology
-permalink: /worldbuilding/anthropology.html
+   layout: page
+   title: anthropology
+   permalink: /worldbuilding/anthropology.html
+---
+
 ---
 
 - evolution of humans
@@ -15,7 +17,7 @@ permalink: /worldbuilding/anthropology.html
    - similarly, differentiation between technologies or sciences and arts, and "science" from other forms of knowledge and truth, such as "religion"
 - how do you define a culture. how do you define a society. what is the difference between the two. how do you define a civilization. how do you define a nation. a state. sovereignty
 
-## a note
+---
 
 I won't be doing guides for culture building per se, primarily because there is no formula you can compute to build a society, but also because, in my opinion, this is the most personal part of worldbuilding: the cultures you build are a product of the goals and interests you want to explore, and that's a task only you can carry out. This also means that your own personal views or convictions on any number of topics are more likely to play a part, and you might find that information and sources that I supply are, in your opinion, total hogwash. Culture is intangible, and unmeasurable, and therefore you are almost certainly coming at it from at least a slightly different angle than I am.
 

@@ -1,7 +1,7 @@
 ---
-layout: default
-title: technology
-permalink: /worldbuilding/technology/patterns.html
+   layout: default
+   title: technology
+   permalink: /worldbuilding/technology/patterns.html
 ---
 
 ## tessellations

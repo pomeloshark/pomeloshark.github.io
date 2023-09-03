@@ -1,7 +1,7 @@
 ---
-layout: default
-title: technology
-permalink: /worldbuilding/technology/machines.html
+   layout: default
+   title: technology
+   permalink: /worldbuilding/technology/machines.html
 ---
 
 * simple machines

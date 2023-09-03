@@ -1,7 +1,7 @@
 ---
-layout: page
-title: bibliography
-permalink: /worldbuilding/bibliography.html
+   layout: page
+   title: bibliography
+   permalink: /worldbuilding/bibliography.html
 ---
 
 ## chemistry

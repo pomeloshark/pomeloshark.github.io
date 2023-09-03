@@ -15,6 +15,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link rel="stylesheet" href="/assets/css/css.css">
+   <link rel="stylesheet" href="/assets/js/toc.js">
    <link rel="stylesheet" href="/assets/fonts/RemixIcon/remixicon.css">
 
    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
@@ -37,12 +38,8 @@
          Language
       </a>
    
-      <a href="/dotfiles" class="global-nav-link">
-         Dotfiles
-      </a>
-   
-      <a href="/coding" class="global-nav-link">
-         Coding
+      <a href="/jekyll" class="global-nav-link">
+         Jekyll
       </a>
    
 </nav>
@@ -50,7 +47,10 @@
 
 <h1>a personal wiki with jekyll</h1>
 
-<p>This is the method I use to store and organize my worldbuilding, and how to implement it if you’d like to do the same.</p>
+   <nav class="contents">
+   </nav>
+
+   <p>This is the method I use to store and organize my worldbuilding, and how to implement it if you’d like to do the same.</p>
 
 <p><a href="https://jekyllrb.com/">Jekyll</a> is a <a href="https://www.cloudflare.com/learning/performance/static-site-generator/">static-site generator</a>: it generates your website once, making all the files ready for retrieval ahead of time. This website was built with it, because it’s what Github Pages uses, but it’s also a really good tool if you just want to browse your files like a website without actually publishing them on one.</p>
 
@@ -85,6 +85,8 @@
   <li>The <code class="language-plaintext highlighter-rouge">assets</code> folder contains things like fonts, images, and Javascript files. It also contains a <code class="language-plaintext highlighter-rouge">.css</code> file importing all of your SCSS so that Jekyll can convert it to regular CSS; don’t edit this file.</li>
 </ul>
 
+
+<script src="/assets/js/toc.js"></script>
 
 
          </main>

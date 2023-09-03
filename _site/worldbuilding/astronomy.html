@@ -15,6 +15,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link rel="stylesheet" href="/assets/css/css.css">
+   <link rel="stylesheet" href="/assets/js/toc.js">
    <link rel="stylesheet" href="/assets/fonts/RemixIcon/remixicon.css">
 
    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
@@ -37,12 +38,8 @@
          Language
       </a>
    
-      <a href="/dotfiles" class="global-nav-link">
-         Dotfiles
-      </a>
-   
-      <a href="/coding" class="global-nav-link">
-         Coding
+      <a href="/jekyll" class="global-nav-link">
+         Jekyll
       </a>
    
 </nav>
@@ -50,27 +47,32 @@
 
 <h1>astronomy</h1>
 
-<ol>
-  <li><a href="/worldbuilding/astronomy/habitability.html">On habitability</a></li>
-  <li><a href="/worldbuilding/astronomy/universe.html">The early universe</a></li>
-  <li><a href="/worldbuilding/astronomy/stars.html">Stars</a></li>
-  <li><a href="/worldbuilding/astronomy/planets.html">Planets</a></li>
-  <li><a href="/worldbuilding/astronomy/building.html">Building</a></li>
-</ol>
+   <nav class="contents">
+   </nav>
 
-<hr />
+   <hr />
+
+<h2 id="on-habitability">On habitability</h2>
 
 <ul>
   <li>what makes a planet habitable or, which earth traits should we steal
     <ul>
       <li>star traits</li>
-      <li>planet traits</li>
+      <li>planet traits
+        <ul>
+          <li>lotta water</li>
+          <li>plate tectonics and supercontinent cycle</li>
+          <li>axial tilt and seasonal variation</li>
+        </ul>
+      </li>
       <li>moons?</li>
     </ul>
   </li>
 </ul>
 
 <hr />
+
+<h2 id="the-universe">The universe</h2>
 
 <ul>
   <li>where did stuff come from?
@@ -93,6 +95,11 @@
       <li>intergalactic/interstellar/interplanetary medium, cosmic dust, nebulae</li>
     </ul>
   </li>
+</ul>
+
+<h3 id="where-do-we-get-the-elements">Where do we get the elements?</h3>
+
+<ul>
   <li>nucleosynthesis
     <ul>
       <li>supernova</li>
@@ -105,11 +112,17 @@
 
 <hr />
 
+<h2 id="stars">Stars</h2>
+
 <p>formation, evolution, life cycle</p>
 
-<hr />
+<h2 id="planetary-systems">Planetary systems</h2>
 
 <p>what kind of stars support planets</p>
+
+<p>planetary disks</p>
+
+<p>how it probably went on earth</p>
 
 <p>what kinds of bodies exist in a system</p>
 <ul>
@@ -122,20 +135,22 @@
   <li>moons</li>
 </ul>
 
-<h2 id="orbital-mechanics">orbital mechanics</h2>
+<h3 id="orbital-mechanics">Orbital mechanics</h3>
 
 <hr />
 
-<h2 id="star">star</h2>
+<h2 id="building">Building</h2>
+
+<h3 id="star">Star</h3>
 
 <ul>
   <li>stellar class -&gt; mass, radius, luminosity, effective temperature</li>
   <li>main sequence lifetime</li>
-  <li>surface flux, radiant flux at 10 parsecs<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></li>
+  <li>surface flux, radiant flux at 10 parsecs</li>
   <li>bolometric magnitude, absolute &amp; apparent + bolometric correction; angular diameter</li>
 </ul>
 
-<h2 id="system-parameters">system parameters</h2>
+<h3 id="system-parameters">System parameters</h3>
 
 <ul>
   <li>the ice/snow/frost line</li>
@@ -143,20 +158,31 @@
   <li>Kopparapu et al studies on greenhouse limits</li>
 </ul>
 
-<h2 id="planet">planet</h2>
+<h3 id="planet">Planet</h3>
 
+<p>mass caps</p>
 <ul>
-  <li>mass, radius, upper limits and predicted ranges</li>
+  <li>2.0 ± 0.7 (chen &amp; kipping 2016)</li>
+  <li>2.0 (zeng et al 2016)</li>
+</ul>
+
+<p>radius caps</p>
+<ul>
+  <li>1.48 +0.08 -0.04 (rogers 2015)</li>
+  <li>1.23 +0.44 -0.22 (chen &amp; kipping 2016)</li>
+  <li>1.5 (lopez &amp; fortney 2014)</li>
+  <li>
+    <p>1.2 (simpson 2016)</p>
+  </li>
   <li>gravity, density</li>
   <li>
     <p>escape velocity</p>
   </li>
   <li>orbital radius, eccentricity, apses, etc</li>
   <li>orbital period, tropical year</li>
-  <li>sidereal day<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>, solar/synodic day</li>
-</ul>
-
-<ul>
+  <li>
+    <p>sidereal day, solar/synodic day</p>
+  </li>
   <li>
     <p>other orbital characteristics</p>
   </li>
@@ -166,18 +192,18 @@
   <li>distance to horizon</li>
 </ul>
 
-<h2 id="moons">moons</h2>
+<h3 id="moons">Moons</h3>
 
 <ul>
   <li>how massive should your moon system be</li>
   <li>radius, composition, mass, gravity, density</li>
   <li>roche limit, hill sphere</li>
-  <li>orbital radius &amp; period; synodic<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> period</li>
+  <li>orbital radius &amp; period; synodic period</li>
   <li>angular diameter, apparent magnitudes</li>
   <li>tidal forces</li>
 </ul>
 
-<h2 id="the-rest-of-the-system">the rest of the system</h2>
+<h3 id="the-rest-of-the-system">The rest of the system</h3>
 
 <ul>
   <li>etc</li>
@@ -188,6 +214,8 @@
 <p>put star chart generator in technology &gt; astronomy section</p>
 
 <hr />
+
+<h2 id="sources">Sources</h2>
 
 <ul>
   <li>Bradley W. Carroll &amp; Dale A. Ostlie, <em>An Introduction to Modern Astrophysics</em>, 2nd edition. Pearson, 2014.
@@ -201,20 +229,9 @@
   <li>Ian Morison, <em>Introduction to Astronomy and Cosmology</em>. Wiley, 2008.</li>
   <li>Michael A. Seeds &amp; Dana E. Backman, <em>Foundations of Astronomy</em>, 11th edition. Brooks/Cole, 2011.</li>
 </ul>
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>Theodore L. Brown, H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, &amp; Patrick Woodward, <em>Chemistry: The Central Science</em>, 11th edition. Pearson, 2009. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:2" role="doc-endnote">
-      <p>Steven S. Zumdahl &amp; Susan A. Zumdahl, <em>Chemistry</em>, 8th edition. Brooks/Cole, 2010. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:3" role="doc-endnote">
-      <p>Darrel Hess, <em>McKnight’s Physical Geography: A Landscape Appreciation</em>, 11th edition. Pearson, 2014. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 
+
+<script src="/assets/js/toc.js"></script>
 
 
          </main>

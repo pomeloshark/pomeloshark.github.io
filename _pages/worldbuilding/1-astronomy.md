@@ -1,23 +1,24 @@
 ---
-layout: page
-title: astronomy
-permalink: /worldbuilding/astronomy.html
+   layout: page
+   title: astronomy
+   permalink: /worldbuilding/astronomy.html
 ---
 
-1. [On habitability](/worldbuilding/astronomy/habitability.html)
-2. [The early universe](/worldbuilding/astronomy/universe.html)
-3. [Stars](/worldbuilding/astronomy/stars.html)
-4. [Planets](/worldbuilding/astronomy/planets.html)
-5. [Building](/worldbuilding/astronomy/building.html)
-
 ---
+
+## On habitability
 
 - what makes a planet habitable or, which earth traits should we steal
   - star traits
   - planet traits
+    - lotta water
+    - plate tectonics and supercontinent cycle
+    - axial tilt and seasonal variation
   - moons?
 
 ---
+
+## The universe
 
 - where did stuff come from?
   - big bang, primordial nucleosynthesis and recombination
@@ -31,6 +32,8 @@ permalink: /worldbuilding/astronomy.html
    - stars < planets and other simple bodies
    - intergalactic/interstellar/interplanetary medium, cosmic dust, nebulae
 
+### Where do we get the elements?
+
 - nucleosynthesis
   - supernova
   - neutron star
@@ -39,11 +42,17 @@ permalink: /worldbuilding/astronomy.html
 
 ---
 
+## Stars
+
 formation, evolution, life cycle
 
----
+## Planetary systems
 
 what kind of stars support planets
+
+planetary disks
+
+how it probably went on earth
 
 what kinds of bodies exist in a system
 - definition of a planet
@@ -54,36 +63,43 @@ what kinds of bodies exist in a system
 - belts, clouds
 - moons
 
-## orbital mechanics
+### Orbital mechanics
 
 ---
 
-## star
+## Building
+
+### Star
 
 + stellar class -> mass, radius, luminosity, effective temperature
 + main sequence lifetime
-+ surface flux, radiant flux at 10 parsecs[^1]
++ surface flux, radiant flux at 10 parsecs
 + bolometric magnitude, absolute & apparent + bolometric correction; angular diameter
 
-[^1]: Theodore L. Brown, H. Eugene LeMay Jr., Bruce E. Bursten, Catherine J. Murphy, & Patrick Woodward, *Chemistry: The Central Science*, 11th edition. Pearson, 2009.
-
-## system parameters
+### System parameters
 
 + the ice/snow/frost line
 + equivalent earth irradiance
 + Kopparapu et al studies on greenhouse limits
 
-## planet
+### Planet
 
-+ mass, radius, upper limits and predicted ranges
+mass caps
+- 2.0 ± 0.7 (chen & kipping 2016)
+- 2.0 (zeng et al 2016)
+
+radius caps
+- 1.48 +0.08 -0.04 (rogers 2015)
+- 1.23 +0.44 -0.22 (chen & kipping 2016)
+- 1.5 (lopez & fortney 2014)
+- 1.2 (simpson 2016)
+
 + gravity, density
 + escape velocity
 
 + orbital radius, eccentricity, apses, etc
 + orbital period, tropical year
-+ sidereal day[^2], solar/synodic day
-
-[^2]: Steven S. Zumdahl & Susan A. Zumdahl, *Chemistry*, 8th edition. Brooks/Cole, 2010.
++ sidereal day, solar/synodic day
 
 + other orbital characteristics
 
@@ -92,18 +108,16 @@ what kinds of bodies exist in a system
 + albedo
 + distance to horizon
 
-## moons
+### Moons
 
 + how massive should your moon system be
 + radius, composition, mass, gravity, density
 + roche limit, hill sphere
-+ orbital radius & period; synodic[^3] period
++ orbital radius & period; synodic period
 + angular diameter, apparent magnitudes
 + tidal forces
 
-[^3]: Darrel Hess, *McKnight's Physical Geography: A Landscape Appreciation*, 11th edition. Pearson, 2014.
-
-## the rest of the system
+### The rest of the system
 
 + etc
 + resonances & titius-bode law
@@ -112,6 +126,8 @@ what kinds of bodies exist in a system
 put star chart generator in technology > astronomy section
 
 ---
+
+## Sources
 
 + Bradley W. Carroll & Dale A. Ostlie, *An Introduction to Modern Astrophysics*, 2nd edition. Pearson, 2014.
    + Bradley W. Carroll & Dale A. Ostlie, "The Celestial Sphere" in *An Introduction to Modern Astrophysics*, 2nd edition. Pearson, 2014.

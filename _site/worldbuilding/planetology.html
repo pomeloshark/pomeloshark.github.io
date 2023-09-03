@@ -15,6 +15,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <link rel="stylesheet" href="/assets/css/css.css">
+   <link rel="stylesheet" href="/assets/js/toc.js">
    <link rel="stylesheet" href="/assets/fonts/RemixIcon/remixicon.css">
 
    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon.png">
@@ -37,12 +38,8 @@
          Language
       </a>
    
-      <a href="/dotfiles" class="global-nav-link">
-         Dotfiles
-      </a>
-   
-      <a href="/coding" class="global-nav-link">
-         Coding
+      <a href="/jekyll" class="global-nav-link">
+         Jekyll
       </a>
    
 </nav>
@@ -50,15 +47,12 @@
 
 <h1>planetology</h1>
 
-<ol>
-  <li><a href="/worldbuilding/planetology/formation.html">Planet formation in depth</a></li>
-  <li><a href="/worldbuilding/planetology/geosphere.html">Geosphere</a></li>
-  <li><a href="/worldbuilding/planetology/hydrosphere.html">Hydrosphere</a></li>
-  <li><a href="/worldbuilding/planetology/atmosphere.html">Atmosphere</a></li>
-  <li><a href="/worldbuilding/planetology/climatology.html">Climatology</a></li>
-  <li><a href="/worldbuilding/planetology/building.html">Building</a></li>
-  <li><a href="/worldbuilding/planetology/mapping.html">Mapping</a></li>
-</ol>
+   <nav class="contents">
+   </nav>
+
+   <hr />
+
+<h2 id="our-only-case-study">Our only case study</h2>
 
 <p>how things (probably) went on earth</p>
 <ul>
@@ -73,25 +67,9 @@
   <li>glaciation</li>
 </ul>
 
-<h2 id="caps">caps</h2>
-
-<p>mass</p>
-<ul>
-  <li>2.0 ± 0.7 (chen &amp; kipping 2016)</li>
-  <li>2.0 (zeng et al 2016)</li>
-</ul>
-
-<p>radius</p>
-<ul>
-  <li>1.48 +0.08 -0.04 (rogers 2015)</li>
-  <li>1.23 +0.44 -0.22 (chen &amp; kipping 2016)</li>
-  <li>1.5 (lopez &amp; fortney 2014)</li>
-  <li>1.2 (simpson 2016)</li>
-</ul>
-
 <hr />
 
-<hr />
+<h2 id="geosphere">Geosphere</h2>
 
 <ul>
   <li>surface formation</li>
@@ -100,7 +78,24 @@
   <li>geologic provinces, mineral deposits &amp; soils</li>
 </ul>
 
+<h3 id="implementing">Implementing</h3>
+
+<p>implementing plate tectonics - some cheats for reverse engineering</p>
+
+<p>The most realistic way to do this would be to start with some primordial cratons and build from there; <a href="https://worldbuildingpasta.blogspot.com/2020/01/an-apple-pie-from-scratch-part-va.html">here</a> is a tutorial on how to do this using GPlates. However, I realize most of us (myself definitely included) have at least a vague notion of the map we want to work with, and so end up kind of working backwards and forwards simultaneously. It’s not impossible, but it will keep you on your toes for a while.</p>
+
+<p>Some points to keep in mind:</p>
+<ul>
+  <li>Remember that the continents are not floating on top of the oceans: you need to account for the entire surface, not just the stuff that’s above the water. It may be helpful to picture the ocean floor as the part that’s moving, and any collisions of continents as by-products of that.</li>
+  <li>Remember that you’re working on the surface of a sphere. The movement of your continents is not constricted in any way by the edges of your map! Make heavy use of a tool like MapToGlobe so that you can better visualize this at all times.</li>
+  <li>Don’t panic if your existing landmasses don’t line up well – it’s the edges of the continental shelves that need to line up, and sea levels are always changing.</li>
+</ul>
+
+<p>geological resources - deposits and distribution</p>
+
 <hr />
+
+<h2 id="hydrosphere">Hydrosphere</h2>
 
 <ul>
   <li>ocean circulation</li>
@@ -109,11 +104,21 @@
   <li>surface waters, fluvial processes</li>
 </ul>
 
+<h3 id="implementing-1">Implementing</h3>
+
 <hr />
+
+<h2 id="atmosphere">Atmosphere</h2>
+
+<h3 id="implementing-2">Implementing</h3>
+
+<hr />
+
+<h2 id="climate">Climate</h2>
 
 <p>köppen classification scheme, trewartha modifications, holdridge life zones</p>
 
-<h2 id="tropical-climates">tropical climates</h2>
+<h3 id="tropical-climates">Tropical climates</h3>
 
 <dl>
   <dt>Af: tropical wet</dt>
@@ -124,7 +129,7 @@
 
 <p>Aw &amp; As: tropical savannah</p>
 
-<h2 id="arid-climates">arid climates</h2>
+<h3 id="arid-climates">Arid climates</h3>
 
 <p>BWh: subtropical or hot desert</p>
 
@@ -134,7 +139,7 @@
 
 <p>BSk: midlatitude or cold steppe</p>
 
-<h2 id="temperate-climates">temperate climates</h2>
+<h3 id="temperate-climates">Temperate climates</h3>
 
 <p>Csa: hot summer mediterranean</p>
 
@@ -154,7 +159,7 @@
 
 <p>Cfc: subpolar oceanic</p>
 
-<h2 id="continental-climates">continental climates</h2>
+<h3 id="continental-climates">Continental climates</h3>
 
 <p>Dfa &amp; Dsa: hot summer humid continental</p>
 
@@ -172,13 +177,13 @@
 
 <p>Dwd: extreme subarctic Manchurian</p>
 
-<h2 id="polar-climates">polar climates</h2>
+<h3 id="polar-climates">Polar climates</h3>
 
 <p>ET: tundra</p>
 
 <p>EF: ice cap</p>
 
-<h2 id="marine-biomes">marine biomes</h2>
+<h3 id="marine-biomes">Marine biomes</h3>
 
 <ul>
   <li>seagrass meadows</li>
@@ -186,29 +191,18 @@
   <li>coral reefs</li>
 </ul>
 
-<h2 id="implement">implement</h2>
-
-<p>-</p>
-
-<h2 id="sources">sources</h2>
+<h3 id="implementing-3">Implementing</h3>
 
 <hr />
 
-<p>implementing plate tectonics - some cheats for reverse engineering</p>
-
-<p>The most realistic way to do this would be to start with some primordial cratons and build from there; <a href="https://worldbuildingpasta.blogspot.com/2020/01/an-apple-pie-from-scratch-part-va.html">here</a> is a tutorial on how to do this using GPlates. However, I realize most of us (myself definitely included) have at least a vague notion of the map we want to work with, and so end up kind of working backwards and forwards simultaneously. It’s not impossible, but it will keep you on your toes for a while.</p>
-
-<p>Some points to keep in mind:</p>
-<ul>
-  <li>Remember that the continents are not floating on top of the oceans: you need to account for the entire surface, not just the stuff that’s above the water. It may be helpful to picture the ocean floor as the part that’s moving, and any collisions of continents as by-products of that.</li>
-  <li>Remember that you’re working on the surface of a sphere. The movement of your continents is not constricted in any way by the edges of your map! Make heavy use of a tool like MapToGlobe so that you can better visualize this at all times.</li>
-  <li>Don’t panic if your existing landmasses don’t line up well – it’s the edges of the continental shelves that need to line up, and sea levels are always changing.</li>
-</ul>
-
-<p>geological resources - deposits and distribution</p>
+<h2 id="mapping">Mapping</h2>
 
 <hr />
 
+<h2 id="sources">Sources</h2>
+
+
+<script src="/assets/js/toc.js"></script>
 
 
          </main>

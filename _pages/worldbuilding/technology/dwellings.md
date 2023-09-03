@@ -1,7 +1,7 @@
 ---
-layout: default
-title: dwellings
-permalink: /worldbuilding/technology/dwellings.html
+   layout: default
+   title: dwellings
+   permalink: /worldbuilding/technology/dwellings.html
 ---
 
 - natural caves and rock overhangs

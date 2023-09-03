@@ -32,7 +32,10 @@ body {
    font-family: $fontfamily-body;
    @include for-phone-only {
       width: 100%;
-   }
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+}
    @include for-tablet-portrait-up {
       width: 100%;
    }
@@ -50,16 +53,26 @@ main {
    background-color: $color-content_background;
    border: 1px solid $color-content_border;
    border-radius: 1rem 1rem 0 0;
-   box-shadow: 0 0 20px $color-content_border;
+   box-shadow: 0 0 10px $color-content_border;
+   @include for-phone-only {
+      border: 0;
+      border-radius: 0;
+      box-shadow: 0;
+   }
 }
 
 footer {
    padding: 3rem;
    background: $color-footer_background;
    border-radius: 0 0 1rem 1rem;
-   box-shadow: 0 0 20px $color-content_border;
+   box-shadow: 0 0 10px $color-content_border;
    font-size: $fontsize-small;
    text-align: center;
+   @include for-phone-only {
+      border: 0;
+      border-radius: 0;
+      box-shadow: 0;
+   }
 }
 
 .nav_general {
@@ -110,10 +123,14 @@ h2,
 h3 {
    font-family: $fontfamily-header;
    font-weight: normal;
+   text-transform: lowercase;
 }
 
 h1 {
    font-size: $fontsize-h1;
+   @include for-phone-only {
+      font-size: $fontsize-large;
+}
    padding: 0 0 0.19em;
    &:before {
       content: '§ ';
@@ -130,7 +147,7 @@ h2 {
 h3 {
    font-size: $fontsize-h3;
    font-variant: small-caps;
-   padding: 0.71em 0 0.9em 0;
+   padding: 0.71em 0 0.9em 3em;
 }
 
 a,
@@ -344,11 +361,22 @@ pre {
 // Homepage nav
 .index-dl {
    padding: 0 6em;
+   @include for-phone-only {
+      padding: 0;
+   }
    dt {
       font-weight: normal;
+      @include for-phone-only {
+//         margin-left: 0;
+//         margin-right: 0;
+      }
    }
    dd {
       margin-left: 0;
       margin-bottom: 1.75em;
+      @include for-phone-only {
+//         margin-left: 0;
+//         margin-right: 0;
+      }
    }
 }

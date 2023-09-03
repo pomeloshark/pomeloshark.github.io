@@ -1,19 +1,14 @@
 ---
-layout: page
-title: phonetics
-permalink: /language/phonetics.html
+   layout: page
+   title: phonetics
+   permalink: /language/phonetics.html
 ---
 
-1. The vocal tract
-2. Consonants
-3. Vowels
-4. Phonetic inventories
+---
 
+## The vocal tract
 
-
-## the vocal tract
-
-### articulators
+### Articulators
 
 - lips
 - tongue
@@ -21,11 +16,11 @@ permalink: /language/phonetics.html
   - body
   - root
 
-### phonation
+### Phonation
 
-## consonants
+## Consonants
 
-### manner of articulation
+### Manner of articulation
 
 A stop is a consonant that completely blocks the airflow. Air builds up behind the point of closure, and is then released.
 
@@ -45,7 +40,7 @@ lateral vs central
 
 
 
-### place of articulation
+### Place of articulation
 
 Lateral airflow is not possible with these consonants because they do not make use of the tongue.
 
@@ -577,7 +572,7 @@ Consonants may also be **doubly articulated**, involving two points of articulat
 
 
 
-### airstream mechanism
+### Airstream mechanism
 
 - pulmonic egressive
 - pulmonic ingressive?
@@ -586,7 +581,7 @@ Consonants may also be **doubly articulated**, involving two points of articulat
 - lingual ingressive - clicks
 - lingual egressive?
 
-### other stuff
+### Other stuff
 
 - nasalization
   - pre-nasalization
@@ -621,19 +616,19 @@ vot
 
 
 
-## vowels
+## Vowels
 
-### height
-### backness
-### roundedness
+### Height
+### Backness
+### Roundedness
 
-### diphthongs
+### Diphthongs
 
-### vowel length
+### Vowel length
 
 
 
-## building a phonetic inventory
+## Building a phonetic inventory
 
-### consonants
-### vowels
+### Consonants
+### Vowels

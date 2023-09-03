@@ -1,7 +1,7 @@
 ---
-layout: page
-title: language
-permalink: /language/index.html
+   layout: page
+   title: language
+   permalink: /language/index.html
 ---
 
 1. [Phonetics](/language/phonetics.html), including how to read the IPA and a crash course in vocal tract anatomy.

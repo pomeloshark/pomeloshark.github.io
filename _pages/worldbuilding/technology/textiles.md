@@ -1,5 +1,5 @@
 ---
-layout: default
-title: technology
-permalink: /worldbuilding/technology/textiles.html
+   layout: default
+   title: technology
+   permalink: /worldbuilding/technology/textiles.html
 ---

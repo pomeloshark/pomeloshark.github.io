@@ -1,7 +1,7 @@
 ---
-layout: page
-title: a personal wiki with jekyll
-permalink: /worldbuilding/jekyll.html
+   layout: page
+   title: a personal wiki with jekyll
+   permalink: /jekyll.html
 ---
 
 This is the method I use to store and organize my worldbuilding, and how to implement it if you'd like to do the same.

@@ -1,14 +1,16 @@
 ---
-layout: page
-title: IPA fonts
-permalink: /language/ipafonts.html
+   layout: page
+   title: IPA fonts
+   permalink: /language/ipafonts.html
+---
+
 ---
 
 As far as I'm aware all major system fonts have IPA support; if you're using another font that doesn't, it'll use your system font as a fallback. This is readable but usually doesn't look too great; for producing documents you'll want to use a font with full IPA support.
 
 Note: some fonts have not yet been updated to include a couple of recent additions to the IPA, the labiodental flap ⱱ and the linguolabial diacritic e̼. Some are missing the Chao tone letters, or more rarely, click symbols. This typically isn't a dealbreaker but I've noted where symbols are missing.
 
-## default & system fonts
+## Default & system fonts
 
 Your computer's system font should be able to display most, if not all, IPA characters.
 
@@ -21,10 +23,9 @@ If you're on Linux: fonts vary by distro, but some common families to look out f
 ```
 a æ ɑ ɒ ɐ b ɓ β ʙ c ç d ɖ ɗ d͡z d͡ʑ d͡ʒ e ɘ ɛ ɜ ɞ ə f ɸ g ɡ ɠ ɢ ʛ ɰ h ɦ ħ ɧ ɥ ʜ i ɨ ɪ j ʝ ɟ ʄ k l ɫ ɬ ɮ ɭ ʟ m ɱ n ɳ ɲ ŋ ɴ o ø ɵ ɔ œ ɶ p q r ɹ ɾ ɽ ɻ ɺ ʁ ʀ s ʂ ɕ ʃ t ʈ t͡s t͡ʂ t͡ʃ u ʉ ʊ ɯ ʌ v ⱱ ʋ w ʍ x ɣ χ y ʏ ʎ z ʐ ʑ ʒ θ ð ʔ ʡ ʕ ʢ ʘ ǀ ǃ ǂ ǁ
 Diacritics: e̟ e̘ e̺ e̤ ë e̪ e̯ ĕ e̻ e̼ e̞ e̽ ẽ e̝ e̠ e̙ e˞ e̜ e̹ e̩ t͡s e̚ ḛ e̬ e̥ ˈ ˌ ː ˑ ʰ ʷ ˡ ⁿ ʲ ˤ ˠ ˥ ˦ ˧ ˨ ˩
-Joined affricates: ʦ ʨ ʧ ʣ ʥ ʤ
 ```
 
-## fonts to download
+## Fonts to download
 
 All of these fonts are free software, mostly released under the Open Font License. Information on individual licenses is provided at the links.
 
