@@ -251,7 +251,9 @@ h2 {
 h3 {
   font-size: 1.563em;
   font-variant: small-caps;
-  padding: 0.71em 0 0.9em 3em;
+  margin: 0.71em 0 0.9em 0;
+  padding-left: 1em;
+  border-left: 1em solid #ebd6d6;
 }
 
 a,
@@ -326,6 +328,7 @@ dd {
 
 img {
   border: 0;
+  max-width: 100%;
 }
 
 figcaption {
@@ -436,7 +439,7 @@ kbd:hover {
 pre {
   padding: 1em;
   margin-bottom: 1.75em;
-  white-space: pre-wrap;
+  overflow-x: scroll;
   background-color: #f8eee8;
   color: #33272a;
   border-radius: 6px;

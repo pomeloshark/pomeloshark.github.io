@@ -50,31 +50,99 @@
    <nav class="contents">
    </nav>
 
-   <p>This is the method I use to store and organize my worldbuilding, and how to implement it if you’d like to do the same.</p>
+   <p>This is the method I use to store and organize my worldbuilding, and how to implement it if you’d like to do the same. It requires some basic familiarity with the command line, but hopefully will be doable even for beginners; installing Jekyll itself is the most difficult part, and even then you can pretty much just copy and paste the commands from the installation guide into your terminal.</p>
 
 <p><a href="https://jekyllrb.com/">Jekyll</a> is a <a href="https://www.cloudflare.com/learning/performance/static-site-generator/">static-site generator</a>: it generates your website once, making all the files ready for retrieval ahead of time. This website was built with it, because it’s what Github Pages uses, but it’s also a really good tool if you just want to browse your files like a website without actually publishing them on one.</p>
 
-<p>The way I structure my Jekyll projects allows me to get all the HTML and CSS out of the way in a handful of files, and then all the actual content is written in Markdown.</p>
+<p>The way I structure my Jekyll projects allows me to get all the HTML and CSS out of the way in a handful of files, and then all the actual content is written in <a href="https://www.markdownguide.org/">Markdown</a>.</p>
 
-<h2 id="getting-started-with-jekyll">getting started with jekyll</h2>
+<h2 id="a-note-on-the-command-line">A note on the command line</h2>
+
+<p>The main thing you’ll need to do via the command line is change the directory you’re in, using the command <code class="language-plaintext highlighter-rouge">cd</code> followed by the path to the new directory, relative to your root directory. <a href="https://www.wikihow.com/Find-a-File%27s-Path-on-Windows">Here</a> is how to find a file’s path on Windows, and <a href="https://macpaw.com/how-to/get-file-path-mac">here</a> is how to find it on a Mac (you can also drag and drop the folder into your terminal and it will automatically fill in the path for you). <a href="https://linuxhandbook.com/get-file-path/">Here</a> are some different methods for Linux.</p>
+
+<h2 id="getting-started-with-jekyll">Getting started with Jekyll</h2>
 
 <p>Follow the instructions for your operating system <a href="https://jekyllrb.com/docs/installation/">here</a> to install Jekyll.</p>
 
-<p>Once you’ve got it installed you can create a new site by running</p>
+<h3 id="starting-from-a-template">Starting from a template</h3>
+
+<p>If you want to use the setup I use, you can download the template at its <a href="https://github.com/pomeloshark/paperwiki-example">Github repository</a>. This way it’s already configured to work well with the theme.</p>
+
+<ol>
+  <li>Go to the <a href="https://github.com/pomeloshark/paperwiki-example">wiki repo</a> and click the green ‘Code’ button; download the repository as a .zip file. Unzip it into your preferred location.</li>
+  <li>Go to your terminal and navigate to the directory by entering <code class="language-plaintext highlighter-rouge">cd /path/to/directory</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">bundle install</code> to install any missing Ruby gems, including the PaperWiki theme.</li>
+  <li>Now you can run <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>. This will generate the site, and give you the server address where you can view it, also known as your localhost. Copy and paste this server address into your browser’s address bar, and you should see the following:</li>
+</ol>
+
+<p><img src="/assets/images/homepage.png" alt="A screenshot of the PaperWiki homepage." /></p>
+
+<p>Your site is now functional!</p>
+
+<h3 id="starting-from-scratch">Starting from scratch</h3>
+
+<p>Once you’ve got Jekyll installed you can create a new site by running</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new SITE_NAME_HERE
 </code></pre></div></div>
 
-<p>If you want to use the setup I use, you can download the template at its github repository. This way it’s already configured to work well with the theme.</p>
+<p>This will give you a very bare bones Jekyll site, with an index page, a folder for blog posts, a config file, and a Gemfile. You’ll have to do a little setup to make it usable with this theme. Here’s what the directory should look like:</p>
 
-<ol>
-  <li>go to the wiki repo and download it. unzip it into your preferred location</li>
-  <li>download the rubygem</li>
-  <li>edit your gemfile and config</li>
-  <li>serve the site and navigate to the localhost</li>
-</ol>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── _pages/
+│   ├── wiki/ # In here is where your organizational pages for your wiki will go.
+├── _posts/ # If you want to write blog posts, they go in here.
+├── _site/
+├── collections/
+│   ├── _wiki/ # In here is where all your articles will go, in markdown or html files.
+├── _config.yml
+├── 404.html
+├── about.md
+├── Gemfile
+├── index.md
+</code></pre></div></div>
 
-<h2 id="site-structure">site structure</h2>
+<p>(Don’t worry about the .gitignore or the Gemfile.lock.)</p>
+
+<p>To use this theme, open your Jekyll site’s <code class="language-plaintext highlighter-rouge">Gemfile</code>, delete the line that says <code class="language-plaintext highlighter-rouge">gem "minima"</code> and replace it with this line:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-theme-paperwiki"</span><span class="p">,</span> <span class="s2">"~&gt; [version]"</span>
+</code></pre></div></div>
+
+<p>And add this line to your Jekyll site’s <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">jekyll-theme-paperwiki</span>
+</code></pre></div></div>
+
+<p>And then execute:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle
+</code></pre></div></div>
+
+<p>Or install it yourself as:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyll-theme-paperwiki
+</code></pre></div></div>
+
+<p>To serve your site locally, navigate into the site’s directory and run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle exec jekyll serve
+</code></pre></div></div>
+
+<p>Navigate to your localhost and…you will see an empty page. This is because the layout in the default <code class="language-plaintext highlighter-rouge">index.md</code> is not set properly. Open this file and change the layout in the front matter like so:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">launchpad</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>This will show you the default wiki homepage.</p>
+
+<h2 id="using-the-wiki">Using the wiki</h2>
+
+<p>The three links - explore, contents, and random page - link to pages that are included with the theme, and consist of pregenerated content based on the wiki articles you’ve written. Now you can start adding articles in your <code class="language-plaintext highlighter-rouge">_wiki</code> folder.</p>
+
+<h2 id="site-structure">Site structure</h2>
 
 <p>A basic Jekyll site includes the following:</p>
 <ul>
@@ -93,7 +161,7 @@
 
       <footer>
    <p>The <a href="https://github.com/pomeloshark/pomeloshark.github.io">code</a> for this website is released under the MIT license.</p>
-   <p>Except where specified otherwise, the information provided here is in the public domain. Do whatever you like with it.</p>
+   <p>Except where specified otherwise, the information provided here is released under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license.</a></p>
 </footer>
 
 
