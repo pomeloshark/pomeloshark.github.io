@@ -26,8 +26,9 @@ How plentiful is food? If you're somewhere like a rainforest, which has essentia
 
 ### Water
 
-- filtration, purification
-- supply
+How close is the nearest body of water? Is it running water, like a river, or still water, like a pond? Is it freshwater, saltwater, or brackish? If there are no water bodies, what other methods do you have to resort to, like digging a well, or collecting rainwater?
+
+How safe is the water to drink? Does it need to be filtered? Purified? What equipment is required to treat it to make it drinkable? Do you have vessels to boil water in?
 
 ### Shelter & safety
 
@@ -42,6 +43,8 @@ What's the climate like? The temperature? The amount of sunlight? If it's always
 How do you get a good night's sleep - on bare ground? A bed of leaves? A woven mat? A frame lifted off the ground? A hammock? Are the nights cold? Do you need a heat source or a way to keep heat in?
 
 ### Health
+
+What common health concerns does the environment present? Disease transmitted through insect bites? Wildfires? Poison ivy? What kind of topical treatments are used? What kind of oral treatments? Many diseases can be prevented through good hygiene; what kind of hygiene practices are employed? What kind of public sanitation practices?
 
 ---
 

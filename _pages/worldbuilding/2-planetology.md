@@ -68,62 +68,87 @@ Af: tropical wet
 : desc
 
 Am: tropical monsoon
+: desc
 
 Aw & As: tropical savannah
+: desc
 
 ### Arid climates
 
 BWh: subtropical or hot desert
+: desc
 
 BSh: subtropical or hot steppe
+: desc
 
 BWk: midlatitude or cold desert
+: desc
 
 BSk: midlatitude or cold steppe
+: desc
 
 ### Temperate climates
 
 Csa: hot summer mediterranean
+: desc
 
 Csb: warm summer mediterranean
+: desc
 
 Csc: cold summer mediterranean
+: desc
 
 Cwa: humid subtropical
+: desc
 
 Cwb: subtropical highland
+: desc
 
 Cwc: temperate highland
+: desc
 
 Cfa: humid subtropical
+: desc
 
 Cfb: temperate oceanic
+: desc
 
 Cfc: subpolar oceanic
+: desc
 
 ### Continental climates
 
 Dfa & Dsa: hot summer humid continental
+: desc
 
 Dfb & Dsb: warm summer humid continental
+: desc
 
 Dfc & Dsc: subarctic humid
+: desc
 
 Dfd & Dsd: extreme subarctic
+: desc
 
 Dwa: hot Manchurian
+: desc
 
 Dwb: warm Manchurian
+: desc
 
 Dwc: subarctic Manchurian
+: desc
 
 Dwd: extreme subarctic Manchurian
+: desc
 
 ### Polar climates
 
 ET: tundra
+: desc
 
 EF: ice cap
+: desc
 
 ### Marine biomes
 
