@@ -112,11 +112,34 @@ This will show you the default wiki homepage.
 
 The three links - explore, contents, and random page - link to pages that are included with the theme, and consist of pregenerated content based on the wiki articles you've written.
 
-Explore will take you to the equivalent of Wikipedia's [main page](https://en.wikipedia.org/wiki/Main_Page), displaying featured articles and statistics about the number of entries. This is where I have chosen to display the main categories for your articles to be organized by. What these categories are, however, are up to you. Clicking on a category will take you to the corresponding portal page, where you can break it down into further subcategories however you'd like.
+Explore will take you to the equivalent of Wikipedia's [main page](https://en.wikipedia.org/wiki/Main_Page), displaying featured articles and statistics about the number of entries. This is where I have chosen to display the main categories for your articles to be organized by; or in Wikipedia terms, _portals_ (since the word category is already in use in Jekyll's structure). What these portals are, however, are up to you. Clicking on a portal will take you to the corresponding portal page, where you can break it down into further subcategories however you'd like.
 
-To set up your categories or portals, you'll need to edit the structure of your site a little bit. In the `_data` folder, create a new file titled `portals.yml`. For each
+To set up your categories or portals, you'll need to edit the structure of your site a little bit. In the `_data` folder, create a new file titled `portals.yml`. The format should read like this:
 
-Now you can start adding articles in your `_wiki` folder.
+```
+   - name: Geography
+     link: /wiki/portal:geography # You can format the link however you like
+     icon: ri-compass-3-line # The code for whatever RemixIcon you would like to display
+     summary: landmasses and oceans
+```
+
+To find an icon, head over to RemixIcon's website and choose one you like. Click on it, and you will see `<i class="some-code-here"`; copy the code in between the quotes and paste it after `icon: `.
+
+In the directory for your site, there are two wiki folders. The first is in the `_pages` folder; this is where all your navigational pages go. The second is in the `collections` folder; this is where you put all your actual content. The search functionality and the random functionality only access this second folder.
+
+For each portal, you need to create a corresponding page in your `_pages/wiki` folder. You can sort these into another folder if you want. Each page should be a Markdown file, with the extension `.md`. The page should contain the following:
+
+```
+---
+   layout: portal
+   title: Geography portal
+   permalink: /wiki/portal:geography
+---
+```
+
+You do not need to add any other text to the page; the portal layout you assigned it will do all the work for you, retrieving every entry in your `_wiki` folder that contains `portal: geography` in its front matter (more on that in a minute).
+
+Now you can start adding articles in your `/collections/_wiki` folder.
 
 All of your wiki pages should be written in Markdown, and you must begin each `.md` file like so:
 
@@ -126,6 +149,68 @@ All of your wiki pages should be written in Markdown, and you must begin each `.
 ```
 
 Between these two lines is where you include *front matter*, such as specifying the layout or the permalink to the page. However, you can leave the front matter blank - wiki pages have layouts and permalinks set by default in the theme's config file, and you only need to specify them if you want to override the defaults. You also do not need to specify a title for the page, as it is automatically taken from the filename. All you absolutely need is the two triple-dashed lines, as Jekyll needs it to know that the front matter is there in order to output the page.
+
+In order for links to your pages to show up on their corresponding portal page, you need to include the portal information in this front matter. That looks like this:
+
+```
+---
+   portal: geography
+---
+```
+
+If you want the entry to be associated with more than one portal, that looks like this:
+
+```
+---
+   portal:
+      - geography
+      - oceanography
+---
+```
+
+The default layout for a wiki entry contains three parts: a sidebar on the left that generates a table of contents based on the headings used in the article; the main body of the article; and a sidebar on the right where you can include the classic Wikipedia-style stats table, the main image associated with the entry, and any other information you want to be visible at a glance:
+
+![A screenshot of a sample PaperWiki article.](/assets/images/article.png)
+
+In order to include these, you have to add them to the front matter.
+
+```
+---
+   image: https://upload.wikimedia.org/wikipedia/commons/a/ad/Wild_Banana_%28Musa_campestris%29_inflorescence_%2815549388566%29.jpg
+   image_caption: An edible banana species.
+---
+```
+
+The image is always shown at the top, with the caption underneath. Any stats or text will appear underneath. You can use whatever key-value pairs you want; a table will be generated containing whatever information you include. The formatting for that looks like this:
+
+```
+---
+   quickstats:
+      type: planet
+      orbital_period: 419.75 solar days
+      semimajor_axis: 1.2229 AU
+---
+```
+
+The layout contains logic that will look inside `quickstats`, if it exists, and iterate through any key-value pairs it finds there, creating a corresponding row in the table for each pair.
+
+You can also include `quicknotes`, which will just output text:
+
+```
+---
+   quicknotes: Here is the text that will appear in the quicknotes section.
+---
+```
+
+Or:
+
+```
+---
+   quicknotes: <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Wild_Banana_%28Musa_campestris%29_inflorescence_%2815549388566%29.jpg">
+---
+```
+
+Any formatting in the quicknotes section should be in HTML, not Markdown, for it to render properly.
 
 Caveats:
 - If the site won't build due to an error with the random page, make sure you have more than one wiki article for it to draw from

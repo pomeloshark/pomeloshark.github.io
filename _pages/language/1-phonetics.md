@@ -8,6 +8,18 @@
 
 ## The vocal tract
 
+The human vocal tract is composed of two primary parts: the **larynx**, where sound is produced; and everything above it, where sound is filtered and shaped into the vast array of vowels and consonants found in human language. This second part is mostly made up of the mouth and the nasal cavity, and its anatomy is fairly obvious; the anatomy of the larynx takes a little practice to become familiar with.
+
+Put your fingertips against your throat. You'll feel a couple hard ridges of cartilage. The most prominent of these is the **thyroid cartilage**, which moves during swallowing motions - the Adam's apple is the name for the part of this cartilage that protrudes the most. Feel around your Adam's apple while swallowing and you'll be able to feel the sides of the cartilage moving up and down as well. Directly behind your Adam's apple is where the vocal cords or **vocal folds** are located.
+
+Moving your fingers down, you'll encounter another ridge of cartilage. If you apply a little bit of pressure, you'll start to feel a gagging sensation in your throat. This is the **cricoid cartilage**, a ring of cartilage encircling the larynx. This moves when you swallow as well, but not as much. Below the cricoid cartilage is the trachea or windpipe.
+
+Moving up from the thyroid cartilage, just above the Adam's apple, you may be able to feel a third ridge, much narrower vertically than the others, just below the angle where your neck starts to turn into jaw. This is not cartilage but the **hyoid bone**, and is not considered to be part of the larynx, but the larynx is suspended from it. This is a U-shaped bone that attaches via muscle to many different segments of the vocal tract: in particular, the larynx below, and the tongue above. something about positioning blah blah blah
+
+There are a couple other pieces of cartilage that you can't feel with your fingers. The first is the **epiglottis**, an elastic leaf-shaped flap of cartilage anchored near the Adam's apple, whose primary function is to cover the trachea when swallowing so that food doesn't end up in the airway.
+
+At the back of the ring of cricoid cartilage there are a pair of cartilages called the **arytenoid cartilages**.
+
 ### Articulators
 
 - lips
@@ -632,3 +644,9 @@ vot
 
 ### Consonants
 ### Vowels
+
+
+
+## Sources
+
+*

@@ -56,6 +56,10 @@
 
 <p>The way I structure my Jekyll projects allows me to get all the HTML and CSS out of the way in a handful of files, and then all the actual content is written in <a href="https://www.markdownguide.org/">Markdown</a>.</p>
 
+<p>I’ve tried to adhere to accessible and easy to read design principles while retaining the look and layout of a classic wiki that we’re all familiar with - I’ve aped some elements of Wikipedia’s organizational system and layout while trying to make it as clean and user friendly as possible.</p>
+
+<p>This theme is not mobile friendly, as I personally do absolutely no work on mobile and thus my development skills are lacking. I stuck in a couple CSS breakpoints, so it’ll be mostly legible on a medium-sized tablet, but don’t expect great results on a phone. There is also no dark mode or other alternate colour scheme, but please feel free to fork this project and add whatever functionality you’re looking for.</p>
+
 <h2 id="a-note-on-the-command-line">A note on the command line</h2>
 
 <p>The main thing you’ll need to do via the command line is change the directory you’re in, using the command <code class="language-plaintext highlighter-rouge">cd</code> followed by the path to the new directory, relative to your root directory. <a href="https://www.wikihow.com/Find-a-File%27s-Path-on-Windows">Here</a> is how to find a file’s path on Windows, and <a href="https://macpaw.com/how-to/get-file-path-mac">here</a> is how to find it on a Mac (you can also drag and drop the folder into your terminal and it will automatically fill in the path for you). <a href="https://linuxhandbook.com/get-file-path/">Here</a> are some different methods for Linux.</p>
@@ -88,18 +92,18 @@
 
 <p>This will give you a very bare bones Jekyll site, with an index page, a folder for blog posts, a config file, and a Gemfile. You’ll have to do a little setup to make it usable with this theme. Here’s what the directory should look like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
-├── _pages/
-│   ├── wiki/ # In here is where your organizational pages for your wiki will go.
-├── _posts/ # If you want to write blog posts, they go in here.
-├── _site/
-├── collections/
-│   ├── _wiki/ # In here is where all your articles will go, in markdown or html files.
-├── _config.yml
-├── 404.html
-├── about.md
-├── Gemfile
-├── index.md
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">.</span>
+<span class="s">├── _pages/</span>
+<span class="s">│   ├── wiki/</span> <span class="c1"># In here is where your organizational pages for your wiki will go.</span>
+<span class="s">├── _posts/</span> <span class="c1"># If you want to write blog posts, they go in here.</span>
+<span class="s">├── _site/</span>
+<span class="s">├── collections/</span>
+<span class="s">│   ├── _wiki/</span> <span class="c1"># In here is where all your articles will go, in markdown or html files.</span>
+<span class="s">├── _config.yml</span>
+<span class="s">├── 404.html</span>
+<span class="s">├── about.md</span>
+<span class="s">├── Gemfile</span>
+<span class="s">├── index.md</span>
 </code></pre></div></div>
 
 <p>(Don’t worry about the .gitignore or the Gemfile.lock.)</p>
@@ -140,7 +144,104 @@
 
 <h2 id="using-the-wiki">Using the wiki</h2>
 
-<p>The three links - explore, contents, and random page - link to pages that are included with the theme, and consist of pregenerated content based on the wiki articles you’ve written. Now you can start adding articles in your <code class="language-plaintext highlighter-rouge">_wiki</code> folder.</p>
+<p>The three links - explore, contents, and random page - link to pages that are included with the theme, and consist of pregenerated content based on the wiki articles you’ve written.</p>
+
+<p>Explore will take you to the equivalent of Wikipedia’s <a href="https://en.wikipedia.org/wiki/Main_Page">main page</a>, displaying featured articles and statistics about the number of entries. This is where I have chosen to display the main categories for your articles to be organized by; or in Wikipedia terms, <em>portals</em> (since the word category is already in use in Jekyll’s structure). What these portals are, however, are up to you. Clicking on a portal will take you to the corresponding portal page, where you can break it down into further subcategories however you’d like.</p>
+
+<p>To set up your categories or portals, you’ll need to edit the structure of your site a little bit. In the <code class="language-plaintext highlighter-rouge">_data</code> folder, create a new file titled <code class="language-plaintext highlighter-rouge">portals.yml</code>. The format should read like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   - name: Geography
+     link: /wiki/portal:geography # You can format the link however you like
+     icon: ri-compass-3-line # The code for whatever RemixIcon you would like to display
+     summary: landmasses and oceans
+</code></pre></div></div>
+
+<p>To find an icon, head over to RemixIcon’s website and choose one you like. Click on it, and you will see <code class="language-plaintext highlighter-rouge">&lt;i class="some-code-here"</code>; copy the code in between the quotes and paste it after <code class="language-plaintext highlighter-rouge">icon: </code>.</p>
+
+<p>In the directory for your site, there are two wiki folders. The first is in the <code class="language-plaintext highlighter-rouge">_pages</code> folder; this is where all your navigational pages go. The second is in the <code class="language-plaintext highlighter-rouge">collections</code> folder; this is where you put all your actual content. The search functionality and the random functionality only access this second folder.</p>
+
+<p>For each portal, you need to create a corresponding page in your <code class="language-plaintext highlighter-rouge">_pages/wiki</code> folder. You can sort these into another folder if you want. Each page should be a Markdown file, with the extension <code class="language-plaintext highlighter-rouge">.md</code>. The page should contain the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+   layout: portal
+   title: Geography portal
+   permalink: /wiki/portal:geography
+---
+</code></pre></div></div>
+
+<p>You do not need to add any other text to the page; the portal layout you assigned it will do all the work for you, retrieving every entry in your <code class="language-plaintext highlighter-rouge">_wiki</code> folder that contains <code class="language-plaintext highlighter-rouge">portal: geography</code> in its front matter (more on that in a minute).</p>
+
+<p>Now you can start adding articles in your <code class="language-plaintext highlighter-rouge">/collections/_wiki</code> folder.</p>
+
+<p>All of your wiki pages should be written in Markdown, and you must begin each <code class="language-plaintext highlighter-rouge">.md</code> file like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+---
+</code></pre></div></div>
+
+<p>Between these two lines is where you include <em>front matter</em>, such as specifying the layout or the permalink to the page. However, you can leave the front matter blank - wiki pages have layouts and permalinks set by default in the theme’s config file, and you only need to specify them if you want to override the defaults. You also do not need to specify a title for the page, as it is automatically taken from the filename. All you absolutely need is the two triple-dashed lines, as Jekyll needs it to know that the front matter is there in order to output the page.</p>
+
+<p>In order for links to your pages to show up on their corresponding portal page, you need to include the portal information in this front matter. That looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+   portal: geography
+---
+</code></pre></div></div>
+
+<p>If you want the entry to be associated with more than one portal, that looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+   portal:
+      - geography
+      - oceanography
+---
+</code></pre></div></div>
+
+<p>The default layout for a wiki entry contains three parts: a sidebar on the left that generates a table of contents based on the headings used in the article; the main body of the article; and a sidebar on the right where you can include the classic Wikipedia-style stats table, the main image associated with the entry, and any other information you want to be visible at a glance:</p>
+
+<p><img src="/assets/images/article.png" alt="A screenshot of a sample PaperWiki article." /></p>
+
+<p>In order to include these, you have to add them to the front matter.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+   image: https://upload.wikimedia.org/wikipedia/commons/a/ad/Wild_Banana_%28Musa_campestris%29_inflorescence_%2815549388566%29.jpg
+   image_caption: An edible banana species.
+---
+</code></pre></div></div>
+
+<p>The image is always shown at the top, with the caption underneath. Any stats or text will appear underneath. You can use whatever key-value pairs you want; a table will be generated containing whatever information you include. The formatting for that looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+   quickstats:
+      type: planet
+      orbital_period: 419.75 solar days
+      semimajor_axis: 1.2229 AU
+---
+</code></pre></div></div>
+
+<p>The layout contains logic that will look inside <code class="language-plaintext highlighter-rouge">quickstats</code>, if it exists, and iterate through any key-value pairs it finds there, creating a corresponding row in the table for each pair.</p>
+
+<p>You can also include <code class="language-plaintext highlighter-rouge">quicknotes</code>, which will just output text:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+   quicknotes: Here is the text that will appear in the quicknotes section.
+---
+</code></pre></div></div>
+
+<p>Or:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+   quicknotes: &lt;img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Wild_Banana_%28Musa_campestris%29_inflorescence_%2815549388566%29.jpg"&gt;
+---
+</code></pre></div></div>
+
+<p>Any formatting in the quicknotes section should be in HTML, not Markdown, for it to render properly.</p>
+
+<p>Caveats:</p>
+<ul>
+  <li>If the site won’t build due to an error with the random page, make sure you have more than one wiki article for it to draw from</li>
+  <li>You may need to specify a permalink and a title if you want to use certain characters that are not allowed in filenames – say, some IPA characters. Otherwise just title your articles “Article title.md”, with spaces, not underscores or hyphens, and the default settings will take care of the rest.</li>
+</ul>
 
 <h2 id="site-structure">Site structure</h2>
 
@@ -152,6 +253,8 @@
   <li>The <code class="language-plaintext highlighter-rouge">_site</code> folder contains everything that Jekyll outputs when it builds the site. Don’t edit anything in this folder, as it will be rewritten the next time you serve the site.</li>
   <li>The <code class="language-plaintext highlighter-rouge">assets</code> folder contains things like fonts, images, and Javascript files. It also contains a <code class="language-plaintext highlighter-rouge">.css</code> file importing all of your SCSS so that Jekyll can convert it to regular CSS; don’t edit this file.</li>
 </ul>
+
+<p>This theme comes with all of these prepackaged, so most of what you have to do is edit the <code class="language-plaintext highlighter-rouge">_config.yaml</code> file. The theme has some default config set already, but you can override these in your own config file if you wish. You can also add any of the above folders to your own project with includes, layouts, or SCSS to override the theme’s files. For example, you will want to add your own <code class="language-plaintext highlighter-rouge">assets</code> folder to store your own images, including one titled <code class="language-plaintext highlighter-rouge">favicon.png</code> in order to override the placeholder one i’ve included.</p>
 
 
 <script src="/assets/js/toc.js"></script>
